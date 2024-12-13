@@ -1,0 +1,841 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.global-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+.cover {
+  height: auto; 
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 550px; 
+  background-size: cover;
+  background-position: right; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  animation: slideBackground 20s infinite; 
+}
+
+/* Gradient overlay for the cover */
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(42, 42, 58, 0.7), rgba(34, 34, 54, 0.5));
+  z-index: 1;
+}
+
+/* Main header container */
+.social-networks {
+  display: flex;
+  justify-content: space-between; /* Ensures space between left and right sections */
+  
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-family: 'Poppins';
+  color: white;
+  font-size: 15px;
+  background-color: #3B5998;
+  
+}
+
+/* Left section for phone icons */
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Right section for social icons */
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+/* General icon styling */
+.fa {
+  font-size: 20px; /* Reduced font size for better fit */
+  width: 40px;     /* Circle width */
+  height: 40px;    /* Circle height */
+  display: flex;
+  padding: 8.5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  line-height: 1; /* Ensures the icon stays centered */
+}
+
+.fa:hover {
+  opacity: 0.7; /* Hover effect */
+  cursor: pointer;
+}
+
+/* Specific styling for each icon */
+.fa-whatsapp {
+  background: #25D366;
+  
+}
+
+.fa-envelope {
+  background: #55555577;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  padding: 11px;
+}
+
+.fa-instagram {
+  background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045)
+}
+
+
+
+
+.header-flex {
+  position: fixed;
+  top: 40px; 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center; 
+  padding: 20px 40px;
+  z-index: 2; 
+  background-color: #1d2a57fa;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.502); 
+}
+
+/* Logo styling */
+.logo {
+  position: absolute; /* Take the logo out of the normal document flow */
+  top: 40px; /* Distance from the top of the page */
+  left: 20px; /* Distance from the left of the page */
+  z-index: 10; 
+  height: 50px; /* Set desired height */
+  position: fixed;
+}
+
+.my-logo {
+  height: 100px; /* Adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+/* Registration button styling */
+.registration {
+  padding: 10px 20px;
+  background-color: #D0D8E2; /* Light blue for the button */
+  color: #333; /* Darker color for the text */
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flex to enable vertical alignment */
+  align-items: center; /* Center the button text vertically */
+  height: 40px; /* Set a specific height to align with other elements */
+}
+
+/* Ensure button text is vertically centered */
+.registration:hover {
+    opacity: 0.8; /* Change opacity on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #333;
+    color: #D0D8E2;
+}
+
+.cover-text {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px; 
+}
+
+.cover-title {
+  font-size: 28px; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  color: white;
+}
+
+.cover-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffffff; /* Light blue for subtitle */
+  font-family: 'Poppins', sans-serif;
+}
+/* Keyframes for sliding background image animation */
+/* Container styles */
+.cover-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slideBackground 30s infinite;
+}
+
+/* Animation for sliding background images */
+@keyframes slideBackground {
+  0%, 10% {
+      background-image: url('imgs/romania.jpg');
+      background-position: right;
+  }
+ 
+  100% {
+      background-image: url('imgs/romcover.jpg');
+      background-position: right;
+  }
+}
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #2d3e50;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #2d3e50;
+    font-weight: 600;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #4CAF50;
+  }
+  
+  .content {
+    width: 75%;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #2d3e50;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #2d3e50;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    
+    margin: 5px 0;
+  }
+  
+
+
+
+.university-image img {
+  width: 600px; /* Adjust size as needed */
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.university-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+.university-image img {
+  width: 350px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.about-block{
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  
+
+}
+
+
+/* Styling for the Registration Section */
+.registration-block {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  text-align: center;
+}
+
+.registration-block h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.registration-block p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.registration-block .btn-register {
+  background-color: #306298;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.registration-block .btn-register:hover {
+  background-color: #73b6fe;
+}
+
+/* Footer Styling */
+.footer-container {
+  width: 100%;
+  background-color: #1d2a57fa;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: 'Nutino', sans-serif;
+}
+
+.logo-footer{
+  width: 200px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer-divider {
+  width: 250px;
+  border-top: 2px solid #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  color: #f2a900;
+}
+
+.company-info {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+
+
+.company-description {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #f2a900;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #555555;
+  font-size: 12px;
+  color: #cccccc;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile adjustments (screens less than or equal to 768px) */
+@media screen and (max-width: 768px) {
+
+  /* General styling for text size and layout adjustments */
+  .cover-title {
+    font-size: 32px; /* Smaller font for mobile */
+  }
+
+  .cover-subtitle {
+    font-size: 16px; /* Adjust subtitle font size */
+  }
+
+
+  .logo {
+    height: 40px;
+    left: 15px; /* Adjust logo positioning */
+  }
+
+
+  .registration {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .main-content {
+    flex-direction: column; /* Stack the main content vertically */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar takes full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .content {
+    width: 100%; /* Main content takes full width */
+  }
+
+  /* Adjust university image for mobile */
+  .university-image img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+
+  /* Adjust about block for mobile */
+  .about-block {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+  }
+
+  
+}
+
+
+
+
+
+
+/* Mobile adjustments for header and social networks */
+@media screen and (max-width: 768px) {
+
+  /* Header flex adjustments */
+  .header-flex {
+    padding: 5px 10px; /* Reduce padding to make the header more compact */
+    flex-direction: column; /* Stack logo and options vertically */
+    align-items: flex-start; /* Align items to the left */
+    top: 1px;
+     /* Let the header shrink to fit content */
+  }
+
+  /* Reduce height and adjust positioning of the logo */
+  .logo img {
+    height: 100px; /* Reduce the logo size */
+   ; /* Adjust logo position */
+    width: 200px;
+  }
+
+
+  /* Social networks section adjustments */
+  .social-networks {
+    padding: 0 5px; /* Reduced padding */
+    height: 5px; /* Smaller height for social network bar */
+    justify-content: center; /* Center the social icons */
+    
+  }
+
+  /* Adjust icon size in social network section */
+  .phone, .social {
+    gap: 6px; /* Reduce the gap between icons */
+  }
+
+  .fa {
+    font-size: 10px; /* Smaller icons */
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+  }
+
+  /* Reduce font size of text in the social networks section */
+  .social-networks .phone,
+  .social-networks .social {
+    font-size: 10px;
+  }
+
+  /* Reduce height for social network section */
+  .social-networks {
+    height: 6px; /* Adjust to a more compact height */
+  }
+}
+
+/* Small screen adjustments (phones with width less than 480px) */
+@media screen and (max-width: 480px) {
+
+  /* Further reduce header padding and height on very small screens */
+  .header-flex {
+    padding: 5px 10px; /* Further reduce padding */
+    height: auto; /* Allow header to shrink */
+  }
+
+  .logo {
+    height: 35px; /* Even smaller logo */
+  }
+
+
+  .social-networks {
+    padding: 0 5px; /* Reduce padding even more */
+    height: 40px; /* Make social section even smaller */
+    justify-content: center;
+  }
+
+  .fa {
+    font-size: 14px; /* Even smaller icons for mobile */
+    width: 30px;
+    height: 30px;
+    padding: 5px; /* Adjust padding for smaller icons */
+  }
+
+  .phone, .social {
+    gap: 5px; /* Smaller gap between social icons */
+  }
+}
+
+.menu_to_show{
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  top: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.hamburger span {
+
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Transformations for Active State */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@keyframes transAnime {
+  from {butom: 0px;}
+  to {top: 50px;}
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    margin: 10px;
+  }
+}
+
+.options-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  z-index: 1; 
+}
+.options-flex-menu{
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 110px;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 999; 
+}
+
+.options-flex-menu.active {
+  display: flex;
+  animation: transAnime ; 
+}
+
+.options-flex-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Hide the social network section */
+  .social-networks {
+    display: none;
+  }
+
+  /* Adjust the cover section */
+  .cover {
+    height: auto; /* Allow the height to adjust based on content */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cover-title {
+    font-size: 28px; /* Smaller title font size */
+  }
+
+  .cover-subtitle {
+    font-size: 14px; /* Smaller subtitle font size */
+  }
+
+  /* Adjust logo and header navigation */
+  .logo {
+    top: 10px;
+    left: 10px;
+    height: 40px;
+  }
+
+  .header-flex {
+    display: none;
+  }
+
+
+
+  /* Who are we section adjustments */
+  .who-are-we {
+    flex-direction: column; /* Stack the text and image */
+    align-items: center;
+    text-align: center;
+  }
+
+  .who-are-we img {
+    max-width: 90%; /* Scale down the image */
+    margin-bottom: 20px;
+  }
+
+  .who-texts {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Adjust grid in service section */
+  .row.g-4 {
+    flex-direction: column; /* Stack the services */
+    gap: 15px;
+  }
+
+  .service-item {
+    width: 90%; /* Full width with margins */
+  }
+
+  /* Testimonials adjustments */
+  .testimonial-card {
+    margin: 20px auto;
+  }
+
+  /* Contact section adjustments */
+  .contact-container {
+    flex-direction: column; /* Stack form and contact info */
+    width: 95%;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .testi-container{
+
+  justify-content: center;
+  width: 300px;
+  
+
+  }
+
+
+}
+

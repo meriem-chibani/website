@@ -1,0 +1,382 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   
+
+
+
+  </head>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="registrationstyle.css">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <body>
+
+    <div class="global-flex">
+
+      <div class="social-networks">
+        <div class="phone">
+          <a href="https://wa.me/213666994804" aria-label="WhatsApp" target="_blank">
+            <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
+          </a>
+          <span>+213 666 99 48 04</span>
+          <a href="mailto:msglobal.algeria@gmail.com" aria-label="Email" target="_blank">
+            <i class="fa fa-envelope" style="font-size: 24px;"></i>
+          </a>
+          <span>msglobal.algeria@gmail.com</span>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/MSGLOBALDZ/?locale=fr_FR" aria-label="Facebook" target="_blank">
+            <i class="fa fa-facebook" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://www.instagram.com/msglobal_algeria/" aria-label="Instagram" target="_blank">
+            <i class="fa fa-instagram" style="font-size: 24px;"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="cover">
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
+        <div class="menu-to-show">
+          
+          <div class="options-flex-menu" id="menu" >
+            <a href="index.html"><div class="header-elem">Home</div></a>
+            <a href="about-us.html"><div class="header-elem">About us</div></a>
+            <a href="services.html"><div class="header-elem">Services</div></a>
+
+            <!-- Dropdown for Destinations -->
+            <div class="header-elem dropdown">
+              <a href="Destinations.html">Destinations</a>
+              <div class="dropdown-content">
+                <a href="Spain.html">Spain</a>
+                <a href="Roumania.html">Romania</a>
+                <a href="hungary.html">Hungary</a>
+                <a href="turkey.html">Turkey</a>
+                <a href="malaysia.html">Malaysia</a>
+              </div>
+
+            </div>
+
+            <a href="contact.html"><div class="header-elem">Contact</div></a>
+            <a href="registration.html"><div class="registration">Registration</div></a>
+          </div>
+
+        </div>
+
+        <div class="header-flex">
+          <div class="logo">
+            <img class="my-logo" src="imgs/whitelogo.png" alt="Logo">
+          </div>
+          <div class="options-flex">
+            <a href="index.html"><div class="header-elem">Home</div></a>
+            <a href="about-us.html"><div class="header-elem">About us</div></a>
+            <a href="services.html"><div class="header-elem">Services</div></a>
+
+            <!-- Dropdown for Destinations -->
+            <div class="header-elem dropdown">
+              <a href="Destinations.html">Destinations</a>
+              <div class="dropdown-content">
+                <a href="Spain.html">Spain</a>
+                <a href="Roumania.html">Romania</a>
+                <a href="hungary.html">Hungary</a>
+                <a href="turkey.html">Turkey</a>
+                <a href="malaysia.html">Malaysia</a>
+              </div>
+
+            </div>
+
+            <a href="contact.html"><div class="header-elem">Contact</div></a>
+            <a href="registration.html"><div class="registration">Registration</div></a>
+          </div>
+
+        </div>
+
+        <div class="cover-text">
+
+          <h1 class="cover-title">Registration</h1>
+          <p class="cover-subtitle"></p>
+
+        </div>
+
+      </div>
+
+     
+      <form id="myform" action="https://formspree.io/f/meoqkwbb"
+      method="POST">
+        <div class="form-container">
+
+          <h2>Please Fill the Form with Your Information</h2>
+
+          <!-- Educational Information Section -->
+          <div class="section educational-info-section">
+
+            <h3>Educational Information</h3>
+            <label for="study-level">Study Level (required)</label>
+
+            <select id="study-level" name="study-level" required>
+              <option value="hschool">High school</option>
+              <option value="Bachelor">Baccalaureate degree / Secondary school diploma</option>
+              <option value="Master">Bachelor / Licence</option>
+              <option value="PhD">Master</option>
+              <option value="Other">PhD</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label for="university">University / Institut (required)</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="field-of-study">Field of Study (required)</label>
+
+            <select id="field-of-study" name="field-of-study" required>
+              <option value="business">Business and Management</option>
+              <option value="health">Health and Medicine</option>
+              <option value="engineering">Engineering and Technology</option>
+              <option value="computing">Computer Science and IT</option>
+              <option value="social-sciences">Social Sciences</option>
+              <option value="natural-sciences">Natural Sciences</option>
+              <option value="arts">Arts and Humanities</option>
+              <option value="education">Education</option>
+              <option value="law">Law and Legal Studies</option>
+              <option value="media">Media and Communication</option>
+              <option value="economics">Economics and Political Science</option>
+              <option value="architecture">Architecture and Design</option>
+              <option value="hospitality">Hospitality and Tourism</option>
+              <option value="agriculture">Agriculture and Veterinary Sciences</option>
+              <option value="sports">Sports and Physical Education</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="year-graduation">Year of Graduation (required)</label>
+
+            <input type="number" id="year-graduation" name="year-graduation" min="2005" max="2024" required>
+
+            <label for="languages">Language Proficiency (required)</label>
+
+            <select id="languages" name="languages" required>
+              <option value="french">French : TCF or other</option>
+              <option value="english">English : IELTS, TOFEL or other</option>
+              <option value="spanish">Spanish : DELE, SIELE or other</option>
+              <option value="nolang">I do not have a language certificate</option>
+            </select>
+
+          </div>
+
+          <!-- Program Information Section -->
+          <div class="section program-info-section">
+
+            <h3>Program of Interest</h3>
+
+            <label for="destination">Destination (required)</label>
+
+            <select id="destination" name="destination" required>
+              <option value="spain">Spain</option>
+              <option value="romania">Romania</option>
+              <option value="hungary">Hungary</option>
+              <option value="poland">Poland</option>
+              <option value="uk">United Kingdom (UK)</option>
+              <option value="france">France</option>
+              <option value="canada">Canada</option>
+              <option value="turkey">Turkey</option>
+              <option value="malaysia">Malaysia</option>
+            </select>
+
+            <label for="field-of-study-program">Field of Study (required)</label>
+
+            <select id="field-of-study-program" name="field-of-study-program" required>
+              <option value="business">Business and Management</option>
+              <option value="health">Health and Medicine</option>
+              <option value="engineering">Engineering and Technology</option>
+              <option value="computing">Computer Science and IT</option>
+              <option value="social-sciences">Social Sciences</option>
+              <option value="natural-sciences">Natural Sciences</option>
+              <option value="arts">Arts and Humanities</option>
+              <option value="education">Education</option>
+              <option value="law">Law and Legal Studies</option>
+              <option value="media">Media and Communication</option>
+              <option value="economics">Economics and Political Science</option>
+              <option value="architecture">Architecture and Design</option>
+              <option value="hospitality">Hospitality and Tourism</option>
+              <option value="agriculture">Agriculture and Veterinary Sciences</option>
+              <option value="sports">Sports and Physical Education</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="cycle">Cycle (required)</label>
+
+            <select id="cycle" name="cycle" required>
+              <option value="Preparatory Year">Preparatory Year</option>
+              <option value="Bachelor">Bachelor</option>
+              <option value="Master">Master</option>
+              <option value="PhD">PhD</option>
+              <option value="Other">Other</option>
+            </select>
+
+          </div>
+
+          <!-- Personal Information Section -->
+          <div class="section personal-info-section">
+
+            <h3>Personal Information</h3>
+
+            <label for="first-name">First Name (required)</label>
+
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="family-name">Family Name (required)</label>
+
+            <input type="text" id="family-name" name="family-name" required>
+
+            <label for="passport-number">Passport Number (required)</label>
+
+            <input type="text" id="passport-number" name="passport-number" required>
+
+            <label for="birthdate">Date of Birth (required)</label>
+
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="gender">Gender (required)</label>
+
+            <select id="gender" name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+
+            <label for="email">Email (required)</label>
+
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone-number">Phone Number (required)</label>
+
+            <input type="tel" id="phone-number" name="phone-number" required>
+
+            <label for="message">Message (Optional)</label>
+
+            <textarea id="message" name="message"></textarea>
+
+            <label for="file">Upload File(s):</label>
+
+          </div>
+
+          <div class="terms">
+
+            <input type="checkbox" id="terms" name="terms" required>
+
+            <label for="terms">
+              I consent to the collection of personal information for registration purposes and acknowledge the agency’s Terms, Conditions, and Refund Policy
+            </label>
+
+          </div>
+
+          <button class="submit-btn" type="submit" onclick="formSubmit()">Submit</button>
+          <div id="error-message"></div>
+          <div id="statusMessage"></div>
+        </div>
+      </form>
+
+    </div>
+
+
+    <!-- Footer Start -->
+  <footer class="footer-container">
+    <div class="footer-content">
+      <div class="footer-row">
+      <!-- Company Info -->
+        <div class="footer-section company-info">
+         <img src="imgs/whitelogo.png" alt="Company Logo" class="logo-footer">
+          <p class="company-description">
+          Your best partner for study abroad with expertise in program selection, visa procedures, and immigration services.
+          </p>
+
+        </div>
+
+      <!-- Extra Links -->
+      <div class="footer-section">
+        <h4>Extra Links</h4>
+        <div class="footer-divider"></div>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <div class="footer-divider"></div>
+        
+        <p><i class="fas fa-phone-alt"></i> <i class="fa fa-whatsapp" style="font-size: 20px; background-color: transparent;"></i> +213 666 99 48 04</p>
+        <p><i class="fas fa-phone-alt"></i> <i class="fa fa-whatsapp" style="font-size: 20px; background-color: transparent;"></i> +7 916 613 29 84</p>
+        <p><i class="fa fa-envelope" style="font-size: 16px; background-color: transparent;"></i> msglobal.algeria@gmail.com</p>
+        <p><i class="fa fa-envelope" style="font-size: 16px; background-color: transparent;"></i> info@msglobal.com</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="footer-divider"></div>
+        <p>Follow Us on our social media:</p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/MSGLOBALDZ/?locale=fr_FR" aria-label="Facebook" target="_blank">
+            <i class="fa fa-facebook" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://www.instagram.com/msglobal_algeria/" aria-label="Instagram" target="_blank">
+            <i class="fa fa-instagram" style="font-size: 24px;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 MS Global Agency | All rights reserved </p>
+  </div>
+</footer>
+
+
+
+
+<!-- Footer End -->
+
+      
+
+      
+
+      
+
+
+
+
+
+    
+    
+
+
+
+
+
+    </div>
+    <script src="javascript.js"></script>
+
+
+  </body>
+</html>
